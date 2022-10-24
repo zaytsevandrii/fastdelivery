@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/fastdelivery/static/css/main.507754cc.css",
+    "main.js": "/fastdelivery/static/js/main.b9cafc0c.js",
+    "static/media/food.svg": "/fastdelivery/static/media/food.2aadd5d9a8c5c4216b650d59ff6e0bfd.svg",
+    "index.html": "/fastdelivery/index.html",
+    "main.507754cc.css.map": "/fastdelivery/static/css/main.507754cc.css.map",
+    "main.b9cafc0c.js.map": "/fastdelivery/static/js/main.b9cafc0c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.507754cc.css",
+    "static/js/main.b9cafc0c.js"
+  ]
+}
