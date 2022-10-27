@@ -2,101 +2,371 @@
   {
     "id": 0,
     "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-    "title": "Пепперони Фреш с перцем",
+    "title": "Homemade Pepperoni Pizza",
     "types": [0, 1],
     "sizes": [26, 30, 40],
-    "price": 803,
+    "price": 16,
     "category": 0,
-    "rating": 4
+    "rating": 50
   },
+
   {
     "id": 1,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
-    "title": "Сырная",
-    "types": [0],
-    "sizes": [26, 40],
-    "price": 245,
+    "imageUrl": "https://image1.masterfile.com/getImage/NDAwLTA4ODg3NjY3ZW4uMDAwMDAwMDA=ALzncq/400-08887667en_Masterfile.jpg",
+    "title": "Noodles with surprise",
+    "types": [0, 1],
+    "price": 9.99,
     "category": 0,
-    "rating": 6
+    "rating": 49
   },
   {
     "id": 2,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
-    "title": "Цыпленок барбекю",
-    "types": [0],
-    "sizes": [26, 40],
-    "price": 295,
-    "category": 1,
-    "rating": 4
+    "imageUrl": "https://image1.masterfile.com/getImage/NjU5LTAzNTM2MTAyZW4uMDAwMDAwMDA=ADasxl/659-03536102en_Masterfile.jpg",
+    "title": "Wonton soup",
+    "types": [0, 1],
+    "price": 8.99,
+    "category": 0,
+    "rating": 48
   },
   {
     "id": 3,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
-    "title": "Кисло-сладкий цыпленок",
-    "types": [1],
-    "sizes": [26, 30, 40],
-    "price": 275,
-    "category": 2,
-    "rating": 2
+    "imageUrl": "https://s1.1zoom.me/big0/995/Pancake_Raspberry_Strawberry_White_background_526470_1280x853.jpg",
+    "title": "Pancakes with fruits",
+    "types": [0, 1],
+    "price": 5,
+    "category": 0,
+    "rating": 47
   },
   {
     "id": 4,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
-    "title": "Чизбургер-пицца",
+    "imageUrl": "https://png.monster/wp-content/uploads/2022/03/png.monster-861.png",
+    "title": "Doner Kebab",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 415,
-    "category": 3,
-    "rating": 8
+    "price": 8.5,
+    "category": 0,
+    "rating": 46
   },
   {
     "id": 5,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
-    "title": "Крэйзи пепперони",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
+    "title": "Cheese Pizza",
     "types": [0],
-    "sizes": [30, 40],
-    "price": 580,
-    "category": 2,
-    "rating": 2
+    "sizes": [26, 40],
+    "price": 14,
+    "category": 0,
+    "rating": 45
   },
   {
     "id": 6,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
-    "title": "Пепперони",
+    "imageUrl": "https://www.pngmart.com/files/21/Adana-Kebab-PNG-HD-Isolated.png",
+    "title": "Adana Kebab",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 675,
-    "category": 1,
-    "rating": 9
+    "price": 8.65,
+    "category": 0,
+    "rating": 44
   },
   {
     "id": 7,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
-    "title": "Маргарита",
+    "imageUrl": "https://img.freepik.com/free-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg?w=2000",
+    "title": "Mixed maki",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 450,
-    "category": 4,
-    "rating": 10
+    "price": 19.99,
+    "category": 0,
+    "rating": 43
   },
   {
     "id": 8,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
-    "title": "Четыре сезона",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP-e0i2f1JCjHRSVDnqfRxnx0InqkXLulA8Q&usqp=CAU",
+    "title": "Burger plate, salad, fries",
     "types": [0, 1],
-    "sizes": [26, 30, 40],
-    "price": 395,
-    "category": 5,
-    "rating": 10
+    "price": 14.99,
+    "category": 0,
+    "rating": 42
   },
   {
     "id": 9,
-    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
-    "title": "Овощи и грибы 🌱",
+    "imageUrl": "https://uploads-ssl.webflow.com/62a0b7d7d22666a4603d8a9d/6304e8d44620892b14240f12_KEBAB%20NEW%20OMAG%20E.png",
+    "title": "Big doner snack",
+    "types": [0, 1],
+    "price": 7.50,
+    "category": 0,
+    "rating": 41
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://cdn.imgbin.com/24/10/3/imgbin-wrap-fast-food-shawarma-doner-kebab-kebab-two-coca-cola-beverage-cans-beside-tacos-and-french-fries-PKR3sWp8kXMrX0iKQ25dfkW7U.jpg",
+    "title": "Yummy combo",
+    "types": [0, 1],
+    "price": 19.99,
+    "category": 0,
+    "rating": 40
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAIC0xrF9UWkgwVYwDBj9UPTXRj5ReX_nY9g&usqp=CAU",
+    "title": "Plate of nuggets, salad, fries",
+    "types": [0, 1],
+    "price": 13.20,
+    "category": 0,
+    "rating": 39
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
+    "title": "BBQ chicken pizza",
+    "types": [0],
+    "sizes": [26, 40],
+    "price": 13.99,
+    "category": 1,
+    "rating": 38
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
+    "title": "Sweet Chicken Pizza",
+    "types": [1],
+    "sizes": [26, 30, 40],
+    "price": 12.99,
+    "category": 2,
+    "rating": 37
+  },
+  {
+    "id": 14,
+    "imageUrl": "https://us.123rf.com/450wm/magone/magone1905/magone190500012/122015504-plate-of-chicken-kebab-and-vegetables-isolated-on-white-background.jpg?ver=6",
+    "title": "Plate of chicken kebab",
+    "types": [1],
+    "price": 11.65,
+    "category": 2,
+    "rating": 36
+  },
+  {
+    "id": 15,
+    "imageUrl": "https://wildwoodrestaurants.co.uk/wp-content/uploads/Side-Fries-1000x563.jpg",
+    "title": "French fries",
+    "types": [1],
+    "price": 3.5,
+    "category": 2,
+    "rating": 35
+  },
+  {
+    "id": 16,
+    "imageUrl": "https://rookcala.sirv.com/combination/ldonercdoner.jpg",
+    "title": "KingSize kebab",
+    "types": [1],
+    "price": 8.99,
+    "category": 2,
+    "rating": 34
+  },
+  {
+    "id": 17,
+    "imageUrl": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/7729361/75a85fc413201adaf6cdf02c56739c33_large.png&width=512&type=webp&quality=90",
+    "title": "Mini Fruit Pie",
+    "types": [1],
+    "price": 2.5,
+    "category": 2,
+    "rating": 33
+  },
+  {
+    "id": 18,
+    "imageUrl": "https://www.istanbulbbqkitchen-mb.co.uk/img/kebab_1705620415.jpg",
+    "title": "Istanbul BBQ Kitchen",
+    "types": [1],
+    "price": 17.99,
+    "category": 2,
+    "rating": 32
+  },
+  {
+    "id": 19,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+    "title": "Cheeseburger Pizza",
     "types": [0, 1],
     "sizes": [26, 30, 40],
-    "price": 285,
+    "price": 13.99,
+    "category": 3,
+    "rating": 31
+  },
+  {
+    "id": 20,
+    "imageUrl": "https://itsu-production-assets.s3.eu-west-2.amazonaws.com/sushi_festival_website_category_fb3a7b190f.png",
+    "title": "Itsu mitsu",
+    "types": [0, 1],
+    "price": 12.50,
+    "category": 3,
+    "rating": 30
+  },
+  {
+    "id": 21,
+    "imageUrl": "https://d2l4kn3pfhqw69.cloudfront.net/wp-content/uploads/2022/06/ttt-phipps-dessert.jpg",
+    "title": "Apple pie",
+    "types": [0, 1],
+    "price": 9.99,
+    "category": 3,
+    "rating": 29
+  },
+  {
+    "id": 22,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+    "title": "Crazy Pepperoni Pizza",
+    "types": [0],
+    "sizes": [30, 40],
+    "price": 12.50,
+    "category": 2,
+    "rating": 28
+  },
+  {
+    "id": 23,
+    "imageUrl": "https://istanbulbbqkitchen.co.uk/img/kebab_1707863662.jpg",
+    "title": "BBQ Kitchen Solihull",
+    "types": [0],
+    "price": 18.99,
+    "category": 2,
+    "rating": 27
+  },
+  {
+    "id": 24,
+    "imageUrl": "https://media.istockphoto.com/photos/poke-bowl-with-salmon-avocado-quinoa-and-cucumber-picture-id1322628932?k=20&m=1322628932&s=612x612&w=0&h=XgBksfX7ptaP1dzmmuoE6KhHPFUWnLbqHn-0VRY7ALc=",
+    "title": "VegFish",
+    "types": [0],
+    "price": 6.99,
+    "category": 2,
+    "rating": 26
+  },
+  {
+    "id": 25,
+    "imageUrl": "https://static.wixstatic.com/media/476659_3a186a2ac4ae486ca3029996669b5ad9~mv2.jpg/v1/crop/x_0,y_4,w_594,h_439/fill/w_536,h_404,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/gettyimages-549424681-594x594.jpg",
+    "title": "Brunch",
+    "types": [0],
+    "price": 3.99,
+    "category": 2,
+    "rating": 25
+  },
+  {
+    "id": 26,
+    "imageUrl": "https://storage.googleapis.com/images-sof-prd-9fa6b8b.sof.prd.v8.commerce.mi9cloud.com/product-images/detail/00062639452117.jpg",
+    "title": "Fresh Fruit Flan",
+    "types": [0],
+    "price": 5.50,
+    "category": 2,
+    "rating": 24
+  },
+  {
+    "id": 27,
+    "imageUrl": "https://img.freepik.com/free-photo/group-rolls-maki-isolated-white-background_185193-73954.jpg?w=360",
+    "title": "A little bit of everything",
+    "types": [0],
+    "price": 6.99,
+    "category": 2,
+    "rating": 23
+  },
+  {
+    "id": 28,
+    "imageUrl": "https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com//content/5f/b1/dadef8a34d65b52dd7afe111b532/fresh-fruit-tart-bakery-catering._TTW_._CR0,0,1000,1000_._SR580,580_._QL100_.jpg",
+    "title": "Large fruit",
+    "types": [0, 1],
+    "price": 9.50,
+    "category": 1,
+    "rating": 22
+  },
+  {
+    "id": 29,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
+    "title": "Pizza Margherita",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 14.50,
+    "category": 4,
+    "rating": 21
+  },
+  {
+    "id": 30,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCcdgfnH1SQQ1fNOI9J0WvoGaezPcj2QtgFw&usqp=CAU",
+    "title": "Nice Snack",
+    "types": [0, 1],
+    "price": 4.50,
+    "category": 4,
+    "rating": 20
+  },
+  {
+    "id": 31,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-GSCv7PPGPKiMnui22_WBUtxEdS4ctZiTTg&usqp=CAU",
+    "title": "Big party",
+    "types": [0, 1],
+    "price": 25.99,
+    "category": 4,
+    "rating": 19
+  },
+  {
+    "id": 32,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQmr4xeoOZRwk3jCk-OCYZ3NHAwWmOG-HPQpx9z_bpWEGl0zvjWNwOyrbvtjxrPWUanH8&usqp=CAU",
+    "title": "Red Dragon Roll",
+    "types": [0, 1],
+    "price": 9.50,
+    "category": 4,
+    "rating": 18
+  },
+  {
+    "id": 33,
+    "imageUrl": "https://troika-cond.ru/upload/iblock/6fa/desert_gogol_mogol_01.jpg",
+    "title": "cake",
+    "types": [0, 1],
+    "price": 2.25,
+    "category": 4,
+    "rating": 17
+  },
+  {
+    "id": 34,
+    "imageUrl": "https://media.istockphoto.com/photos/pasta-with-salmon-and-vegetables-on-white-background-picture-id1079928664?k=20&m=1079928664&s=612x612&w=0&h=Y1-cNgtINFcxT6BTWw6EYYHYSRJia3uenOit-CKWaZM=",
+    "title": "Meat salad",
+    "types": [0, 1],
+    "price": 11.50,
+    "category": 4,
+    "rating": 16
+  },
+  {
+    "id": 35,
+    "imageUrl": "https://media.istockphoto.com/photos/plate-of-grilled-chicken-with-vegetables-on-wite-background-top-view-picture-id1055015208?k=20&m=1055015208&s=612x612&w=0&h=cgoCUIdwpXEHTvHmkS5Qcn2NRsQyhlhM2s65iIyKEKg=",
+    "title": "Plate of Food",
+    "types": [0, 1],
+    "price": 16.50,
+    "category": 4,
+    "rating": 15
+  },
+  {
+    "id": 36,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
+    "title": "Four Seasons Pizza",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 14.99,
     "category": 5,
-    "rating": 7
+    "rating": 14
+  },
+  {
+    "id": 37,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0rnZ9F9MGNV7UK36gkN0SXQAbV-y_DlumSg&usqp=CAU",
+    "title": "Yummy con",
+    "types": [0, 1],
+    "price": 7.25,
+    "category": 5,
+    "rating": 13
+  },
+  {
+    "id": 38,
+    "imageUrl": "https://media.istockphoto.com/photos/general-tsos-chicken-with-rice-american-chinese-cuisine-isolated-on-picture-id974232142?k=20&m=974232142&s=612x612&w=0&h=xE66Go5Zdz0p0tKloGQ_KHiC_Rr2pxrMGUerHcas84M=",
+    "title": "Rice and chicken",
+    "types": [0, 1],
+    "price": 15.25,
+    "category": 5,
+    "rating": 12
+  },
+  {
+    "id": 39,
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+    "title": "Mushroom Pizza ",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 13.99,
+    "category": 5,
+    "rating": 11
   }
 ]

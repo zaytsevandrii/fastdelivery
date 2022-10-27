@@ -9,14 +9,17 @@ function FoodBlock({el}) {
         setFoodCount((prev)=>prev+1)
     }
     return (
-        <div>
+        <div className="food_wrapper">
             <div className="food-block">
                 <img
                     className="food-block__image"
                     src={el.imageUrl}
                     alt="Food"
                 />
-                <h4 className="food-block__title">{el.title}</h4>
+                {el.sizes?
+                <h4 className="food-block__title">{el.title}</h4>:
+                <h4 className="food-block__title2">{el.title}</h4>}
+                 {el.sizes?
                 <div className="food-block__selector">
                    {/*  <ul>
                         {el.types.map((typeInd,i)=><li key={i} onClick={()=>setActiveType(i)} className={activeType===i?'active':''}>{typeNames[typeInd]}</li>)}
@@ -25,8 +28,9 @@ function FoodBlock({el}) {
                        {el.sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
                     </ul>
                 </div>
+                :''}
                 <div className="food-block__bottom">
-                    <div className="food-block__price">от {el.price} £</div>
+                    <div className="food-block__price">{el.price} £</div>
                     <div onClick={onClickAdd} className="button button--outline button--add">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

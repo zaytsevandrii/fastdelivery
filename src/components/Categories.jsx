@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 function Categories() {
     const [activeIndex,setActiveIndex]=useState(0)
-    const categories=['All','WithMeat','Vegenn','Grill','Spicy','Sishi',]
+    const categories=['All','Chinese','Kebab','Dishes','Desserts','Pizzas',]
 
    
     return (
