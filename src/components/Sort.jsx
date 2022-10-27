@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 
-function Sort() {
+function Sort({activeList,setActiveList}) {
   const [isVisible,setIsVisible]= useState(false)
-  const list=['Most popular','Price','alphabet']
-  const [activeList,setActiveList] = useState(0)
+  const list=[{name:'Most popular',sortProperty:'rating'},
+  {name:'Price',sortProperty:'price'},
+  {name:'Title',sortProperty:'title'}]
+
   const onClickListItem = (i)=>{
     setActiveList(i)
     setIsVisible(false)
@@ -24,11 +26,11 @@ function Sort() {
                   />
                 </svg>
                 <b>Sort by:</b>
-                <span>{list[activeList]}</span>
+                <span>{activeList.name}</span>
               </div>
              {isVisible&& <div className="sort__popup">
                 <ul>
-                  {list.map((el,i)=><li className={activeList===i?'active':''} onClick={()=>onClickListItem(i)} key={i}>{el}</li>)}
+                  {list.map((el,i)=><li className={activeList.sortProperty===el.sortProperty?'active':''} onClick={()=>onClickListItem(el)} key={i}>{el.name}</li>)}
                 </ul>
               </div>}
             </div>
