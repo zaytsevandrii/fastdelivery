@@ -1,20 +1,22 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import logoSvg from "../assets/img/food.svg"
+import Search from "./notFoundBlock/Search/Search"
 
-function Header() {
+function Header({searchValue,setSearchValue}) {
     return (
         <div className="header">
             <div className="container">
-                <Link to="/">
+                <Link to="/fastdelivery">
                     <div className="header__logo">
                         <img width="50" src={logoSvg} alt="Food logo" />
                         <div>
-                            <h1>Superfast food delivery</h1>
+                            <h1>Superfast delivery</h1>
                             <p>The most delicious food in the universe</p>
                         </div>
                     </div>
                 </Link>
+                <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
                 <div className="header__cart">
                     <Link to="/cart" className="button button--cart">
                         <span>520 £</span>
