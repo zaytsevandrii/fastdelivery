@@ -5,15 +5,20 @@ import Skeleton from "../components/FoodBlockSkeleton"
 import Pagination from "../components/Pagination/Pagination"
 import Sort from "../components/Sort"
 import { MySearchContext } from "../components/Context"
+import { useSelector} from 'react-redux'
 
 function HomePage() {
+    const categoryIndex = useSelector(state=>state.filerSlice.categoryId)
+    const activeSort = useSelector(state=>state.filerSlice.sort)
     const { searchValue} = useContext(MySearchContext)
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
-    const [categoryIndex, setCategoryIndex] = useState(0)
-    const [activeSort, setActiveSort] = useState({ name: "Most popular", sortProperty: "rating" })
+   /*  const [categoryIndex, setCategoryIndex] = useState(0) */
+    /* const [activeSort, setActiveSort] = useState({ name: "Most popular", sortProperty: "rating" }) */
+    const setActiveSort = ()=>{}
     window.scrollTo(0, 0)
+    console.log(categoryIndex,activeSort)
     
     useEffect(() => {
         setIsLoading(true)
@@ -31,8 +36,8 @@ function HomePage() {
     return (
         <div className="container">
             <div className="content__top">
-                <Categories activeIndex={categoryIndex} setActiveIndex={setCategoryIndex} />
-                <Sort activeList={activeSort} setActiveList={setActiveSort} />
+                <Categories activeIndex={categoryIndex} />
+                <Sort activeList={activeSort}  />
             </div>
             <h2 className="content__title">All food</h2>
             <div className="content__items">
