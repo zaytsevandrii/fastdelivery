@@ -14,6 +14,7 @@ function HomePage() {
     const [categoryIndex, setCategoryIndex] = useState(0)
     const [activeSort, setActiveSort] = useState({ name: "Most popular", sortProperty: "rating" })
     window.scrollTo(0, 0)
+    
     useEffect(() => {
         setIsLoading(true)
         fetch(

@@ -10,6 +10,7 @@ function Sort({activeList,setActiveList}) {
     setActiveList(i)
     setIsVisible(false)
   }
+  console.log('sort render')
   return (
     <div className="sort">
               <div onClick={()=>setIsVisible(!isVisible)} className="sort__label">
