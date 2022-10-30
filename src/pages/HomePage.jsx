@@ -5,24 +5,23 @@ import Skeleton from "../components/FoodBlockSkeleton"
 import Pagination from "../components/Pagination/Pagination"
 import Sort from "../components/Sort"
 import { MySearchContext } from "../components/Context"
-import { useSelector} from 'react-redux'
+import { useSelector } from "react-redux"
+import axios from "axios"
 
 function HomePage() {
-    const categoryIndex = useSelector(state=>state.filerSlice.categoryId)
-    const activeSort = useSelector(state=>state.filerSlice.sort)
-    const { searchValue} = useContext(MySearchContext)
+    const categoryIndex = useSelector((state) => state.filerSlice.categoryId)
+    const activeSort = useSelector((state) => state.filerSlice.sort)
+    const { searchValue } = useContext(MySearchContext)
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
-   /*  const [categoryIndex, setCategoryIndex] = useState(0) */
+    /*  const [categoryIndex, setCategoryIndex] = useState(0) */
     /* const [activeSort, setActiveSort] = useState({ name: "Most popular", sortProperty: "rating" }) */
-    const setActiveSort = ()=>{}
+    const setActiveSort = () => {}
     window.scrollTo(0, 0)
-    console.log(categoryIndex,activeSort)
-    
     useEffect(() => {
         setIsLoading(true)
-        fetch(
+        /* fetch(
             `https://635646e9a2d1844a9770bb9d.mockapi.io/items?page=${currentPage}&${searchValue.length===0&&`limit=12&`}${
                 categoryIndex > 0 ? `category=${categoryIndex}` : ""
             }&sortBy=${activeSort.sortProperty}&order=asc`
@@ -31,13 +30,23 @@ function HomePage() {
             .then((res) => {
                 setItems(res)
                 setIsLoading(false)
+            }) */
+        axios
+            .get(
+                `https://635646e9a2d1844a9770bb9d.mockapi.io/items?page=${currentPage}&${
+                    searchValue.length === 0 && `limit=12&`
+                }${categoryIndex > 0 ? `category=${categoryIndex}` : ""}&sortBy=${activeSort.sortProperty}&order=asc`
+            )
+            .then((response) => {
+                setItems(response.data)
+                setIsLoading(false)
             })
-    }, [categoryIndex, activeSort, currentPage,searchValue])
+    }, [categoryIndex, activeSort, currentPage, searchValue])
     return (
         <div className="container">
             <div className="content__top">
                 <Categories activeIndex={categoryIndex} />
-                <Sort activeList={activeSort}  />
+                <Sort activeList={activeSort} />
             </div>
             <h2 className="content__title">All food</h2>
             <div className="content__items">

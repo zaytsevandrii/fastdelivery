@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import logoSvg from "../assets/img/food.svg"
-import Search from "./notFoundBlock/Search/Search"
+import Search from "./Search/Search"
 
 function Header() {
     return (
