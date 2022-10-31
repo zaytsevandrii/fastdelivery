@@ -1,24 +1,41 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from 'react-redux'
 import { setActiveList } from "../redux/slices/filterSlice"
 
+export const sortList = [
+    { name: "Most popular", sortProperty: "rating" },
+    { name: "Price", sortProperty: "price" },
+    { name: "Title", sortProperty: "title" },
+]
 function Sort() {
     const [isVisible, setIsVisible] = useState(false)
-    const list = [
-        { name: "Most popular", sortProperty: "rating" },
-        { name: "Price", sortProperty: "price" },
-        { name: "Title", sortProperty: "title" },
-    ]
+  
     const dispatch=useDispatch()
     const activeSort = useSelector(state=>state.filerSlice.sort)
+    const sortRef = useRef()
 
     const onClickListItem = (i) => {
         setIsVisible(false)
         dispatch(setActiveList(i))
     }
 
+    useEffect(()=>{
+        const clickOutside = (event)=>{
+            if(!event.path.includes(sortRef.current)){
+                setIsVisible(false)
+            }
+
+        }
+
+        document.body.addEventListener('click', clickOutside)
+        return()=>{
+            document.body.removeEventListener ('click', clickOutside)
+        }
+    },[])
+
     return (
-        <div className="sort">
+        <div ref={sortRef} className="sort">
             <div onClick={() => setIsVisible(!isVisible)} className="sort__label">
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -32,7 +49,7 @@ function Sort() {
             {isVisible && (
                 <div className="sort__popup">
                     <ul>
-                        {list.map((el, i) => (
+                        {sortList.map((el, i) => (
                             <li
                                 className={activeSort.sortProperty === el.sortProperty ? "active" : ""}
                                 onClick={() => onClickListItem(el)}

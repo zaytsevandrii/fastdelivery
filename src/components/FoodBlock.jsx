@@ -1,36 +1,46 @@
 import React, { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { addItem } from "../redux/slices/cartSlice"
 
-function FoodBlock({el}) {
-    const [foodCount,setFoodCount]=useState(0)
-    const [activeType,setActiveType]=useState(0)
+function FoodBlock({foodItem}) {
     const [activeSize,setActiveSize]=useState(0)
-    const typeNames = ['тонкое','традиционное']
+    const res=true
+    const dispath=useDispatch()
     const onClickAdd = ()=>{
-        setFoodCount((prev)=>prev+1)
+       const item={
+            id:foodItem.id,
+            title:foodItem.title,
+            price:foodItem.price,
+            imageUrl:foodItem.imageUrl,
+        }
+       
+        dispath(addItem({...item,size:foodItem.sizes&&foodItem.sizes[activeSize]}))
     }
+    const checkCount=useSelector(state=>state.cart.items.find(obj=>obj.id===foodItem.id))
+    const foodCount=checkCount?checkCount.count:0
     return (
         <div className="food_wrapper">
             <div className="food-block">
                 <img
                     className="food-block__image"
-                    src={el.imageUrl}
+                    src={foodItem.imageUrl}
                     alt="Food"
                 />
-                {el.sizes?
-                <h4 className="food-block__title">{el.title}</h4>:
-                <h4 className="food-block__title2">{el.title}</h4>}
-                 {el.sizes?
+                {foodItem.sizes?
+                <h4 className="food-block__title">{foodItem.title}</h4>:
+                <h4 className="food-block__title2">{foodItem.title}</h4>}
+                 {foodItem.sizes?
                 <div className="food-block__selector">
                    {/*  <ul>
                         {el.types.map((typeInd,i)=><li key={i} onClick={()=>setActiveType(i)} className={activeType===i?'active':''}>{typeNames[typeInd]}</li>)}
                     </ul> */}
                     <ul>
-                       {el.sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
+                       {foodItem.sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
                     </ul>
                 </div>
                 :''}
                 <div className="food-block__bottom">
-                    <div className="food-block__price">{el.price} £</div>
+                    <div className="food-block__price">{foodItem.price} £</div>
                     <div onClick={onClickAdd} className="button button--outline button--add">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -39,7 +49,7 @@ function FoodBlock({el}) {
                             />
                         </svg>
                         <span>Add</span>
-                        <i>{foodCount}</i>
+                        {foodCount>0&&<i>{foodCount}</i>}
                     </div>
                 </div>
             </div>
