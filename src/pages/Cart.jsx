@@ -9,14 +9,12 @@ function Cart() {
     const dispatch=useDispatch()
     const {items,totalPrice}=useSelector(state=>state.cart)
     const removeItems=()=>{
-        if(window.confirm("Are you really want to delete all items?")){
+        if(window.confirm("Do you really want to delete all items?")){
             dispatch(clearItems())
         }
     }
     const totalCount = items.reduce((sum,item)=>sum+item.count,0)
     
-    /* const checkCount=useSelector(state=>state.cart.items.find(obj=>obj.id===foodItem.id))
-    const foodCount=checkCount?checkCount.count:0 */
     if(!totalPrice){
         return <CartEmpty/>
     }

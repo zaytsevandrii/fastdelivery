@@ -1,5 +1,5 @@
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addItem,removeItems,decrementItems } from "../redux/slices/cartSlice"
 
 function CartItem({ id, title, price, imageUrl, size,count }) {
@@ -11,7 +11,7 @@ const decrementItem=()=>{
     dispatch(decrementItems(id))
 }
 const removeItem=()=>{
-    if(window.confirm("Are you really want to delete this item?")){
+    if(window.confirm("Do you really want to delete this item?")){
         dispatch(removeItems(id))
     }
 }

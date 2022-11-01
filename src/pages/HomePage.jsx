@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from "react"
+import React, { useEffect, useState, useContext} from "react"
 import Categories from "../components/Categories"
 import FoodBlock from "../components/FoodBlock"
 import Skeleton from "../components/FoodBlockSkeleton"
@@ -16,9 +16,6 @@ function HomePage() {
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
- 
-    /*  const [categoryIndex, setCategoryIndex] = useState(0) */
-    /* const [activeSort, setActiveSort] = useState({ name: "Most popular", sortProperty: "rating" }) */
     window.scrollTo(0, 0)
 
     useEffect(() => {

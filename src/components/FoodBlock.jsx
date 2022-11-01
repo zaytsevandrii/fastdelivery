@@ -4,7 +4,6 @@ import { addItem } from "../redux/slices/cartSlice"
 
 function FoodBlock({foodItem}) {
     const [activeSize,setActiveSize]=useState(0)
-    const res=true
     const dispath=useDispatch()
     const onClickAdd = ()=>{
        const item={
@@ -31,9 +30,6 @@ function FoodBlock({foodItem}) {
                 <h4 className="food-block__title2">{foodItem.title}</h4>}
                  {foodItem.sizes?
                 <div className="food-block__selector">
-                   {/*  <ul>
-                        {el.types.map((typeInd,i)=><li key={i} onClick={()=>setActiveType(i)} className={activeType===i?'active':''}>{typeNames[typeInd]}</li>)}
-                    </ul> */}
                     <ul>
                        {foodItem.sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
                     </ul>

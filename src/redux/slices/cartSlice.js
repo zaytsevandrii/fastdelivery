@@ -39,8 +39,10 @@ export const cartSlice = createSlice({
         },
         decrementItems(state, action) {
             const findItem = state.items.find(obj=>obj.id===action.payload)
-            if (findItem){
+            if (findItem.count>1){
                 findItem.count--
+            }else{
+                state.items=state.items.filter(el=>el.id!==action.payload)
             }
             state.totalPrice=(state.items.reduce((sum,obj)=>(sum+obj.price*obj.count),0)).toFixed(2)
         },
