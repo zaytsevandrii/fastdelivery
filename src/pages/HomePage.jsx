@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useContext} from "react"
+import React, { useEffect, useState} from "react"
 import Categories from "../components/Categories"
 import FoodBlock from "../components/FoodBlock"
 import Skeleton from "../components/FoodBlockSkeleton"
 import Pagination from "../components/Pagination/Pagination"
 import Sort from "../components/Sort"
-import { MySearchContext } from "../components/Context"
 import {  useSelector } from "react-redux"
 import axios from "axios"
 

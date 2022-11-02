@@ -4,8 +4,12 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 
-function FoodInfo() {
-    const [item,setItem] = useState({})
+const FoodInfo:React.FC = ()=>{
+    const [item,setItem] = useState<{
+        imageUrl:string;
+        title:string;
+        price:number;
+    }>()
     const {id} = useParams()
     useEffect(() => {
         axios
@@ -17,7 +21,9 @@ function FoodInfo() {
             })
             .catch((error) =>console.error(error))
     }, [id])
-
+if(!item){
+    return <>Loading...</>
+}
   return (
     <div className='container'>
         <div className="content__itemId">

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import App from "./App"
@@ -7,13 +7,16 @@ import { ContextProvider } from "./components/Context"
 import { store } from "./redux/store"
 import { Provider } from "react-redux"
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(
-        <Provider store={store}>
-            <BrowserRouter>
+const rootElement = document.getElementById("root")
+if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement)
+    root.render(
+        <BrowserRouter>
+            <Provider store={store}>
                 <ContextProvider>
                     <App />
                 </ContextProvider>
-            </BrowserRouter>
-        </Provider>
-)
+            </Provider>
+        </BrowserRouter>
+    )
+}
