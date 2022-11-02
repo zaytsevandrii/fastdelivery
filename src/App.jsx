@@ -4,6 +4,7 @@ import "./scss/app.scss"
 import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import Cart from "./pages/Cart"
+import FoodInfo from "./pages/FoodInfo"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                     <Routes>
                         <Route path="/fastdelivery" element={<HomePage/>} />
                         <Route path="/cart" element={<Cart />} />
+                        <Route path="/foodinfo/:id" element={<FoodInfo/>} />
                         <Route path="*" element={<NotFound/>} />
                     </Routes>
             </div>

@@ -12,7 +12,7 @@ function Sort() {
     const [isVisible, setIsVisible] = useState(false)
   
     const dispatch=useDispatch()
-    const activeSort = useSelector(state=>state.filerSlice.sort)
+    const {activeSort} = useSelector(state=>state.filerSlice)
     const sortRef = useRef()
 
     const onClickListItem = (i) => {

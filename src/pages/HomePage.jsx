@@ -8,11 +8,9 @@ import { MySearchContext } from "../components/Context"
 import {  useSelector } from "react-redux"
 import axios from "axios"
 
-
 function HomePage() {
-    const categoryIndex = useSelector((state) => state.filerSlice.categoryId)
-    const activeSort = useSelector((state) => state.filerSlice.sort)
-    const { searchValue } = useContext(MySearchContext)
+    const {searchValue,categoryIndex,activeSort} = useSelector (state=>state.filerSlice)
+    /* const { searchValue } = useContext(MySearchContext) */
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
@@ -30,6 +28,7 @@ function HomePage() {
                 setItems(response.data)
                 setIsLoading(false)
             })
+            .catch((error) =>console.error(error))
     }, [categoryIndex, activeSort, currentPage, searchValue])
 
     return (

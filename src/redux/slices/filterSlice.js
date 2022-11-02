@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    categoryId: 0,
+    searchValue: '',
+    categoryIndex: 0,
     currentPage: 1,
-    sort: {
+    activeSort: {
         name: "Most popular",
         sortProperty: "rating",
     },
@@ -14,23 +15,21 @@ export const filterSlice = createSlice({
     initialState,
     reducers: {
         setCategoryId(state, action) {
-            state.categoryId = action.payload
+            state.categoryIndex = action.payload
+        },
+        setSearchValues(state, action) {
+            state.searchValue = action.payload
         },
         setActiveList: (state, action) => {
-            state.sort = action.payload
+            state.activeSort = action.payload
         },
         incrementByAmount: (state, action) => {
             state.value += action.payload
-        },
-        setFilters: (state, action) => {
-          state.currentPage=action.payload.currentPage
-          state.categoryId=action.payload.categoryId
-          state.sort=action.payload.sort
         },
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCategoryId, setActiveList, incrementByAmount,setFilters } = filterSlice.actions
+export const { setCategoryId, setActiveList, incrementByAmount, setSearchValues } = filterSlice.actions
 
 export default filterSlice.reducer

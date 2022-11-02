@@ -8,14 +8,14 @@ import CartEmpty from "../components/CartEmpty"
 function Cart() {
     const dispatch=useDispatch()
     const {items,totalPrice}=useSelector(state=>state.cart)
+
     const removeItems=()=>{
         if(window.confirm("Do you really want to delete all items?")){
             dispatch(clearItems())
         }
     }
     const totalCount = items.reduce((sum,item)=>sum+item.count,0)
-    
-    if(!totalPrice){
+    if(!totalPrice||totalCount<1){
         return <CartEmpty/>
     }
     return (

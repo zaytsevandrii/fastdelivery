@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import { addItem } from "../redux/slices/cartSlice"
 
 function FoodBlock({foodItem}) {
@@ -20,6 +21,7 @@ function FoodBlock({foodItem}) {
     return (
         <div className="food_wrapper">
             <div className="food-block">
+                <Link to={`/foodinfo/${foodItem.id}`}>
                 <img
                     className="food-block__image"
                     src={foodItem.imageUrl}
@@ -28,6 +30,7 @@ function FoodBlock({foodItem}) {
                 {foodItem.sizes?
                 <h4 className="food-block__title">{foodItem.title}</h4>:
                 <h4 className="food-block__title2">{foodItem.title}</h4>}
+                </Link>
                  {foodItem.sizes?
                 <div className="food-block__selector">
                     <ul>
