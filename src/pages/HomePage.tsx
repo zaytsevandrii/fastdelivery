@@ -7,8 +7,8 @@ import Sort from "../components/Sort"
 import {  useSelector } from "react-redux"
 import axios from "axios"
 
-function HomePage() {
-    const {searchValue,categoryIndex,activeSort} = useSelector (state=>state.filerSlice)
+const HomePage:React.FC=()=> {
+    const {searchValue,categoryIndex,activeSort} = useSelector ((state:any)=>state.filerSlice)
     /* const { searchValue } = useContext(MySearchContext) */
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
@@ -34,17 +34,17 @@ function HomePage() {
         <div className="container">
             <div className="content__top">
                 <Categories activeIndex={categoryIndex} />
-                <Sort activeList={activeSort} />
+                <Sort /* activeList={activeSort} */ />
             </div>
             <h2 className="content__title">All food</h2>
             <div className="content__items">
                 {isLoading
                     ? [...new Array(24)].map((_, i) => <Skeleton key={i} />)
                     : items
-                          .filter((el) => el.title.toLowerCase().includes(searchValue.toLowerCase()))
-                          .map((el, i) => <FoodBlock key={i} foodItem={el} />)}
+                          .filter((el:any) => el.title.toLowerCase().includes(searchValue.toLowerCase()))
+                          .map((el:any, i) => <FoodBlock key={i} {...el} />)}
             </div>
-            <Pagination onChangePage={(number) => setCurrentPage(number)} />
+            <Pagination onChangePage={(number:any) => setCurrentPage(number)} />
         </div>
     )
 }

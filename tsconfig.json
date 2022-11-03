@@ -20,5 +20,5 @@
       "jsx": "react-jsx", // Support JSX in .tsx files
       "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
     },
-    "include":["src"] // *** The files TypeScript should type check ***
+    "include":["src", "src/@types"] // *** The files TypeScript should type check ***
   }

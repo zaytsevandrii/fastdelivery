@@ -16,7 +16,7 @@ function CartEmpty() {
                 </p>
                 <img src={emptyCart} alt="Empty cart" />
                 <Link className="button button--black" to="/fastdelivery">
-                    <span>Вернуться назад</span>
+                    <span>Come back</span>
                 </Link>
             </div>
         </div>

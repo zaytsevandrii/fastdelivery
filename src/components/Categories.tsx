@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { setCategoryId } from "../redux/slices/filterSlice"
 import { useDispatch } from 'react-redux'
 
-
-function Categories({activeIndex}) {
+type CategoriesProps={
+    activeIndex:number
+}
+const Categories:React.FC<CategoriesProps>=({activeIndex})=>{
     const categories=['All','Chinese','Kebab','Dishes','Desserts','Pizzas',]
     const dispatch=useDispatch()
 

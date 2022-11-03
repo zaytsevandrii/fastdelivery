@@ -3,43 +3,46 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { addItem } from "../redux/slices/cartSlice"
 
-function FoodBlock({foodItem}) {
+type FoodBlockProps={
+    id:string,title:string,price:number,imageUrl:string,sizes:number[]
+}
+const FoodBlock:React.FC<FoodBlockProps>=({id,title,price,imageUrl,sizes})=>{
     const [activeSize,setActiveSize]=useState(0)
     const dispath=useDispatch()
     const onClickAdd = ()=>{
        const item={
-            id:foodItem.id,
-            title:foodItem.title,
-            price:foodItem.price,
-            imageUrl:foodItem.imageUrl,
+            id:id,
+            title:title,
+            price:price,
+            imageUrl:imageUrl,
         }
        
-        dispath(addItem({...item,size:foodItem.sizes&&foodItem.sizes[activeSize]}))
+        dispath(addItem({...item,size:sizes&&sizes[activeSize]}))
     }
-    const checkCount=useSelector(state=>state.cart.items.find(obj=>obj.id===foodItem.id))
+    const checkCount=useSelector((state:any)=>state.cart.items.find((obj:any)=>obj.id===id))
     const foodCount=checkCount?checkCount.count:0
     return (
         <div className="food_wrapper">
             <div className="food-block">
-                <Link to={`/foodinfo/${foodItem.id}`}>
+                <Link to={`/foodinfo/${id}`}>
                 <img
                     className="food-block__image"
-                    src={foodItem.imageUrl}
+                    src={imageUrl}
                     alt="Food"
                 />
-                {foodItem.sizes?
-                <h4 className="food-block__title">{foodItem.title}</h4>:
-                <h4 className="food-block__title2">{foodItem.title}</h4>}
+                {sizes?
+                <h4 className="food-block__title">{title}</h4>:
+                <h4 className="food-block__title2">{title}</h4>}
                 </Link>
-                 {foodItem.sizes?
+                 {sizes?
                 <div className="food-block__selector">
                     <ul>
-                       {foodItem.sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
+                       {sizes.map((el,i)=><li key={i} onClick={()=>setActiveSize(i)} className={activeSize===i?'active':''} >{el} cm</li>)}
                     </ul>
                 </div>
                 :''}
                 <div className="food-block__bottom">
-                    <div className="food-block__price">{foodItem.price} £</div>
+                    <div className="food-block__price">{price} £</div>
                     <div onClick={onClickAdd} className="button button--outline button--add">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

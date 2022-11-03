@@ -5,16 +5,16 @@ import CartItem from "../components/CartItem"
 import { clearItems } from "../redux/slices/cartSlice"
 import CartEmpty from "../components/CartEmpty"
 
-function Cart() {
+const Cart:React.FC=()=> {
     const dispatch=useDispatch()
-    const {items,totalPrice}=useSelector(state=>state.cart)
+    const {items,totalPrice}=useSelector((state:any)=>state.cart)
 
     const removeItems=()=>{
         if(window.confirm("Do you really want to delete all items?")){
             dispatch(clearItems())
         }
     }
-    const totalCount = items.reduce((sum,item)=>sum+item.count,0)
+    const totalCount = items.reduce((sum:number,item:any)=>sum+item.count,0)
     if(!totalPrice||totalCount<1){
         return <CartEmpty/>
     }
@@ -84,7 +84,7 @@ function Cart() {
                 </div>
             </div>
             <div className="content__items">
-                {items.map(obj=>
+                {items.map((obj:any)=>
                 <CartItem {...obj} key={obj.id}/> )}
                
             </div>
