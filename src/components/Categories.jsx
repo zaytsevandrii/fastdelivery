@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { setCategoryId } from "../redux/slices/filterSlice"
 import { useDispatch } from 'react-redux'
 
