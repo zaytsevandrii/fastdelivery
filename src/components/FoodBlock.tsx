@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { addItem } from "../redux/slices/cartSlice"
+import { RootState } from "../redux/store"
 
 type FoodBlockProps={
     id:string,title:string,price:number,imageUrl:string,sizes:number[]
@@ -19,7 +20,7 @@ const FoodBlock:React.FC<FoodBlockProps>=({id,title,price,imageUrl,sizes})=>{
        
         dispath(addItem({...item,size:sizes&&sizes[activeSize]}))
     }
-    const checkCount=useSelector((state:any)=>state.cart.items.find((obj:any)=>obj.id===id))
+    const checkCount=useSelector((state:RootState)=>state.cart.items.find((obj)=>obj.id===id))
     const foodCount=checkCount?checkCount.count:0
     return (
         <div className="food_wrapper">

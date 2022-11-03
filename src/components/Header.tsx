@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router-dom"
 import logoSvg from "../assets/img/food.svg"
 import Search from "./Search/Search"
 import {useSelector} from "react-redux"
+import { RootState } from "../redux/store"
 
 function Header() {
-    const {items,totalPrice}=useSelector((state:any)=>state.cart)
-    const totalCount = items.reduce((sum:number,item:any)=>sum+item.count,0)
+    const {items,totalPrice}=useSelector((state:RootState)=>state.cart)
+    const totalCount = items.reduce((sum:number,item)=>sum+item.count,0)
     const location = useLocation()
     return (
         <div className="header">

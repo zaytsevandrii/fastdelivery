@@ -2,7 +2,7 @@ import React from "react"
 import ContentLoader from "react-content-loader"
 
 
-const Skeleton = (props:any) => (
+const Skeleton:React.FC = (props) => (
     <div className="food-block-wrapper">
         <ContentLoader
             className="food-block"

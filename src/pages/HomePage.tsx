@@ -6,11 +6,20 @@ import Pagination from "../components/Pagination/Pagination"
 import Sort from "../components/Sort"
 import {  useSelector } from "react-redux"
 import axios from "axios"
+import { RootState } from "../redux/store"
 
+interface HPitems{
+    id:string,
+    title:string,
+    price:number,
+    imageUrl:string,
+    sizes:number[],
+}
 const HomePage:React.FC=()=> {
-    const {searchValue,categoryIndex,activeSort} = useSelector ((state:any)=>state.filerSlice)
+    const {searchValue,categoryIndex,activeSort} = useSelector ((state:RootState)=>state.filerSlice)
     /* const { searchValue } = useContext(MySearchContext) */
-    const [items, setItems] = useState([])
+    /* const [items, setItems] = useState([]) */
+    const [items,setItems] = useState<HPitems[]>([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
     window.scrollTo(0, 0)
@@ -29,7 +38,6 @@ const HomePage:React.FC=()=> {
             })
             .catch((error) =>console.error(error))
     }, [categoryIndex, activeSort, currentPage, searchValue])
-
     return (
         <div className="container">
             <div className="content__top">
@@ -41,10 +49,10 @@ const HomePage:React.FC=()=> {
                 {isLoading
                     ? [...new Array(24)].map((_, i) => <Skeleton key={i} />)
                     : items
-                          .filter((el:any) => el.title.toLowerCase().includes(searchValue.toLowerCase()))
-                          .map((el:any, i) => <FoodBlock key={i} {...el} />)}
+                          .filter((el) => el.title.toLowerCase().includes(searchValue.toLowerCase()))
+                          .map((el, i) => <FoodBlock key={i} {...el} />)}
             </div>
-            <Pagination onChangePage={(number:any) => setCurrentPage(number)} />
+            <Pagination onChangePage={(number) => setCurrentPage(number)} />
         </div>
     )
 }

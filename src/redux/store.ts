@@ -10,3 +10,6 @@ export const store = configureStore({
     food
   },
 })
+
+
+export type RootState = ReturnType<typeof store.getState>

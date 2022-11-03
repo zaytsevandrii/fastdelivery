@@ -1,4 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+
+type Sort={
+    name: string,
+    sortProperty:string
+}
 
 const initialState = {
     searchValue: '',
@@ -14,22 +19,19 @@ export const filterSlice = createSlice({
     name: "filter",
     initialState,
     reducers: {
-        setCategoryId(state, action) {
+        setCategoryId(state, action:PayloadAction<number>) {
             state.categoryIndex = action.payload
         },
-        setSearchValues(state, action) {
+        setSearchValues(state, action:PayloadAction<string>) {
             state.searchValue = action.payload
         },
-        setActiveList: (state, action) => {
+        setActiveList: (state, action:PayloadAction<Sort>) => {
             state.activeSort = action.payload
-        },
-        incrementByAmount: (state, action) => {
-            state.value += action.payload
         },
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCategoryId, setActiveList, incrementByAmount, setSearchValues } = filterSlice.actions
+export const { setCategoryId, setActiveList, setSearchValues } = filterSlice.actions
 
 export default filterSlice.reducer
