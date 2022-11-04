@@ -2,14 +2,14 @@ import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { addItem } from "../redux/slices/cartSlice"
-import { RootState } from "../redux/store"
+import { AppDispatch, RootState } from "../redux/store"
 
 type FoodBlockProps={
     id:string,title:string,price:number,imageUrl:string,sizes:number[]
 }
 const FoodBlock:React.FC<FoodBlockProps>=({id,title,price,imageUrl,sizes})=>{
     const [activeSize,setActiveSize]=useState(0)
-    const dispath=useDispatch()
+    const dispath=useDispatch<AppDispatch>()
     const onClickAdd = ()=>{
        const item={
             id:id,

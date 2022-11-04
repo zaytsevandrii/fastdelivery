@@ -6,7 +6,8 @@ import Pagination from "../components/Pagination/Pagination"
 import Sort from "../components/Sort"
 import {  useSelector } from "react-redux"
 import axios from "axios"
-import { RootState } from "../redux/store"
+import {RootState } from "../redux/store"
+
 
 interface HPitems{
     id:string,
@@ -37,7 +38,9 @@ const HomePage:React.FC=()=> {
                 setIsLoading(false)
             })
             .catch((error) =>console.error(error))
+        
     }, [categoryIndex, activeSort, currentPage, searchValue])
+
     return (
         <div className="container">
             <div className="content__top">

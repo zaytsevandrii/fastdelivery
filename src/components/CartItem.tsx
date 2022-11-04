@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { addItem,removeItems,decrementItems } from "../redux/slices/cartSlice"
+import { AppDispatch } from "../redux/store"
 
 type CartItemProps={
     id:string,
@@ -11,7 +12,7 @@ type CartItemProps={
     count:number
 }
 const CartItem:React.FC<CartItemProps>=({ id, title, price, imageUrl, size,count })=> {
-const dispatch=useDispatch()
+const dispatch=useDispatch<AppDispatch>()
 const incrementItem=()=>{
     dispatch(addItem({id}))
 }

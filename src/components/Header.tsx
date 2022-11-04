@@ -1,14 +1,23 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Link, useLocation } from "react-router-dom"
 import logoSvg from "../assets/img/food.svg"
 import Search from "./Search/Search"
 import {useSelector} from "react-redux"
 import { RootState } from "../redux/store"
 
+
 function Header() {
     const {items,totalPrice}=useSelector((state:RootState)=>state.cart)
     const totalCount = items.reduce((sum:number,item)=>sum+item.count,0)
     const location = useLocation()
+    const isLoading = useRef(false)
+    useEffect(()=>{
+        if(isLoading.current){
+            const json = JSON.stringify(items)
+            localStorage.setItem('basket',json)
+        }
+        isLoading.current=true
+    },[items])
     return (
         <div className="header">
             <div className="container">

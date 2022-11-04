@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { getitemsFromLS } from "../../utils/getItemsFromLS"
 
 export type CartItem={
     id:string,
@@ -9,17 +10,17 @@ export type CartItem={
     count:number,
 }
 interface CartSliceState{
-    totalPrice:string|number,
+    totalPrice:number|string,
     items:CartItem[],
     sort:{
         name:string,
         sortProperty:string
     }
 }
-
+const {items,totalPrice} = getitemsFromLS()
 const initialState:CartSliceState = {
-    totalPrice: 0,
-    items: [],
+    totalPrice,
+    items,
     sort: {
         name: "Most popular",
         sortProperty: "rating",
@@ -44,6 +45,7 @@ export const cartSlice = createSlice({
                     count:1
                 })
             }
+            
             state.totalPrice=state.items.reduce((sum,obj)=>(sum+obj.price*obj.count),0).toFixed(2)
         },
         incrementItem(state, action:PayloadAction<string>) {

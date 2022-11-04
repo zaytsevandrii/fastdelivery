@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux"
 import CartItem from "../components/CartItem"
 import { clearItems } from "../redux/slices/cartSlice"
 import CartEmpty from "../components/CartEmpty"
-import { RootState } from "../redux/store"
+import { AppDispatch, RootState } from "../redux/store"
 
 const Cart:React.FC=()=> {
-    const dispatch=useDispatch()
+    const dispatch=useDispatch<AppDispatch>()
     const {items,totalPrice}=useSelector((state:RootState)=>state.cart)
 
     const removeItems=()=>{
