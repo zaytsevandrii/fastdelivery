@@ -2,14 +2,18 @@
 
 Used in the Project
 
-React v18
-UseState, UseEffect, UseContext, UseCallback, UseRef, UseSelector,UseDispatch
+React v18, TypeScript
+useState, useEffect, useContext, useCallback, useMemo, useRef, 
 
 Redux Toolkit
+useSelector, useDispatch
+
+Sass
 
 SkeletonReact
 
 ReactRouter
+useParams, useNavigate, Outlet
 
 React Paginate
 
@@ -18,8 +22,6 @@ Lodash debounce
 Axios
 
 Mockapi.io
-
-Sass
 
 Icons from https://www.iconfinder.com/
 
