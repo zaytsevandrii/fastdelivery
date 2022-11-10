@@ -3,9 +3,11 @@
 Used in the Project
 
 React v18, TypeScript
+
 useState, useEffect, useContext, useCallback, useMemo, useRef, 
 
 Redux Toolkit
+
 useSelector, useDispatch
 
 Sass
@@ -13,6 +15,7 @@ Sass
 SkeletonReact
 
 ReactRouter
+
 useParams, useNavigate, Outlet
 
 React Paginate
