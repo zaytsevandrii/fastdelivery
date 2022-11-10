@@ -1,35 +1,35 @@
 # Fast Food Delivery
 
-Used in the Project
+###Used in the Project
 
-React v18, TypeScript
+####React v18, TypeScript
 
 useState, useEffect, useContext, useCallback, useMemo, useRef, 
 
 
-Redux Toolkit
+####Redux Toolkit
 
 useSelector, useDispatch
 
 
-Sass
+####Sass
 
-SkeletonReact
+####SkeletonReact
 
-ReactRouter
+####ReactRouter
 
 useParams, useNavigate, Outlet
 
 
-React Paginate
+####React Paginate
 
-Lodash debounce 
+####Lodash debounce 
 
-Axios
+####Axios
 
-Mockapi.io
+####Mockapi.io
 
-Icons from https://www.iconfinder.com/
+####Icons from https://www.iconfinder.com/
 
 
 
