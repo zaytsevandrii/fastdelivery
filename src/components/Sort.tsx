@@ -35,7 +35,6 @@ const Sort:React.FC=React.memo(
                 }
     
             }
-    
             document.body.addEventListener('click', clickOutside)
             return()=>{
                 document.body.removeEventListener ('click', clickOutside)
