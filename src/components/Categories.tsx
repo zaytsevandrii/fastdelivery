@@ -15,7 +15,6 @@ const Categories:React.FC<CategoriesProps>=React.memo(({activeIndex})=>{
         dispatch(setCategoryId(i))
     }
 
-
     return (
         <div className="categories">
             <ul>
