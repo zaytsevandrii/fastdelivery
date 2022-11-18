@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react"
 import Header from "./components/Header"
 import NotFound from "./pages/NotFound"
 import "./scss/app.scss"
 import { Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import Cart from "./pages/Cart"
-import FoodInfo from "./pages/FoodInfo"
+import SkeletoneFood from "./components/SkeletoneFood"
+
+const FoodInfo = React.lazy(() => import("./pages/FoodInfo"))
 
 
 function App() {
@@ -13,12 +15,20 @@ function App() {
         <div className="wrapper">
             <Header />
             <div className="content">
-                    <Routes>
-                        <Route path="/fastdelivery" element={<HomePage/>} />
-                        <Route path="/cart" element={<Cart />} />
-                        <Route path="/foodinfo/:id" element={<FoodInfo/>} />
-                        <Route path="*" element={<NotFound/>} />
-                    </Routes>
+                <Routes>
+                    <Route path="/fastdelivery" element={<HomePage />} />
+                    <Route path="/cart" element={<Cart />} />
+
+                    <Route
+                        path="/foodinfo/:id"
+                        element={
+                            <React.Suspense fallback={<SkeletoneFood/>}>
+                                <FoodInfo />
+                            </React.Suspense>
+                        }
+                    />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
             </div>
         </div>
     )

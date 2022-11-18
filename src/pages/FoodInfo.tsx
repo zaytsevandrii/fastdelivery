@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
+import SkeletoneFood from '../components/SkeletoneFood'
 
 const FoodInfo:React.FC = ()=>{
     const [item,setItem] = useState<{
@@ -22,7 +23,7 @@ const FoodInfo:React.FC = ()=>{
             .catch((error) =>console.error(error))
     }, [id])
 if(!item){
-    return <>Loading...</>
+    return <SkeletoneFood className='container'/>
 }
   return (
     <div className='container'>
